@@ -8,9 +8,6 @@ export const Background = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  /* background: url("/images/background.svg") no-repeat center center;
-  background-size: cover; */
 `;
 export const Wrap = styled.div`
   position: relative;
@@ -23,7 +20,7 @@ export const Wrap = styled.div`
 export const CalendarWrap = styled.div`
   display: flex;
   align-items: center;
-  margin-top: 150px;
+  margin-top: 50px;
 `;
 
 export const Btn = styled.img`
