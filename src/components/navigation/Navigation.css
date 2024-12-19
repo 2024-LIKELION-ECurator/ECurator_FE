@@ -1,0 +1,63 @@
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff2') format('woff2'),
+       url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@media screen and (max-width: 1090px) {
+  .nav {
+    left: initial;
+    top: initial;
+    bottom: 0px;
+    width: 100%;
+  }
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between; /* 좌우 정렬 */
+  align-items: center; /* 세로 중앙 정렬 */
+  padding: 20px;
+  margin: 0;
+  font-family: 'Pretendard-Regular', sans-serif; /* 기본 폰트 설정 */
+}
+
+.nav-left {
+  display: flex;
+  align-items: center; /* 세로 중앙 정렬 */
+  gap: 30px; /* 메뉴 간격 */
+}
+
+.nav-right {
+  display: flex;
+  align-items: center; /* 세로 중앙 정렬 */
+}
+
+.nav a {
+  font-family: 'Pretendard-Regular', sans-serif; 
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 0 10px;
+}
+
+.nav img {
+  height: 50px;
+}
+
+img.nav-profile-icon {
+  background-image: url('../../images/default_profile_img.png');
+  background-size: cover; 
+  background-position: center; 
+  width: 30px;
+  height: 30px;
+  border-radius: 50%; /* 원형으로 만드는 부분 */
+  object-fit: cover; /* 이미지 비율을 유지하며 원 안에 맞추기 */
+  overflow: hidden; /* 부모 요소 크기를 넘지 않도록 */
+  margin: 0;
+}
+

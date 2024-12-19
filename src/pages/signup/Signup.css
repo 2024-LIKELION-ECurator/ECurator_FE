@@ -1,0 +1,67 @@
+/* 비밀번호 오류 메시지 스타일 */
+.password-error {
+  color: red;
+  font-size: 12px;
+  margin: 5px;
+}
+
+/* 생년월일 입력을 위한 스타일 */
+.birth-input {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.birth-select {
+  display: block;
+  box-sizing: border-box;
+  padding: 10px;
+  border-radius: 12px;
+  width: 32%; 
+  line-height: 24px;
+  color: #292929;
+  font-size: 16px;
+  background-color: #f2f2f2;
+}
+
+
+.input input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 12px;
+  font-size: 16px;
+  color: #292929;
+  background-color: #f2f2f2;
+}
+
+.input input:focus {
+  border-color: #FECCC9;
+  outline: none;
+}
+
+/* 기존 버튼 스타일 유지 */
+.signup_btn {
+  margin-top: 4px;
+  padding: 10px;
+  border-radius: 12px;
+  width: 100%;
+  line-height: 24px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #d6d6d6;
+  cursor: not-allowed;
+}
+
+.signup_btn.on {
+  background-color: #FECCC9;
+  cursor: pointer;
+}
+
+.signup_btn:disabled {
+  background-color: #d6d6d6;
+  cursor: not-allowed;
+}
+
