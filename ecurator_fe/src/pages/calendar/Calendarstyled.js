@@ -9,18 +9,28 @@ export const Background = styled.div`
   justify-content: center;
   align-items: center;
 
+  /* background: url("/images/background.svg") no-repeat center center;
+  background-size: cover; */
+`;
+export const Wrap = styled.div`
+  position: relative;
+  bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 export const CalendarWrap = styled.div`
   display: flex;
   align-items: center;
-  margin-top: 50px;
-  img {
-    cursor: pointer;
-    width: 40px;
-    height: 40px;
-    margin: 40px;
-  }
+  margin-top: 150px;
+`;
+
+export const Btn = styled.img`
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  margin: 40px;
 `;
 
 export const Calendar = styled.div`
@@ -102,7 +112,7 @@ export const Week = styled.div`
   margin: 4px;
 `;
 
-export const Day = styled.div`
+export const DayWrap = styled.div`
   /* width: 13%; */
   width: 95px;
   aspect-ratio: 1;
@@ -112,8 +122,9 @@ export const Day = styled.div`
   border-radius: 10px;
   box-sizing: border-box;
   display: flex;
-  justify-content: left;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
+  /* align-items: flex-start; */
   font-size: 16px;
   font-weight: 700;
   padding: 7.5px 10px;
@@ -130,4 +141,15 @@ export const Day = styled.div`
   &.selected {
     background-color: #fbe7d4; /* 선택된 날짜 배경 */
   }
+`;
+
+export const Day = styled.div`
+  width: 73px;
+  height: 16px;
+  text-align: left;
+`;
+
+export const Icon = styled.img`
+  width: 55px;
+  height: 55px;
 `;
