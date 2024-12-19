@@ -21,7 +21,7 @@ const PostList = () => {
             <S.Bar>
                 <div className="button-section">
                     <button className="back-button" onClick={handleGoBack}>뒤로 가기</button>
-                    <button className="calendar-button" onClick={handleGoToCalendar}>캘린더 가기</button>
+                    <button className="calendar-button" onClick={handleGoToCalendar}>메인홈 가기</button>
                 </div>
             </S.Bar>
         </S.Container>

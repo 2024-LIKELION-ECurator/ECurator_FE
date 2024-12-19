@@ -6,7 +6,6 @@ export const ModalOverlay = styled.div`
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -44,8 +43,7 @@ export const Row = styled.div`
   flex-direction: column;
   gap: 12px;
 `;
-
-export const Button = styled.div`
+export const Button = styled.button`
   display: flex;
   width: 120px;
   height: 36px;
@@ -54,25 +52,26 @@ export const Button = styled.div`
   border: 1px solid #000;
   cursor: pointer;
   margin-top: 10px;
-  color: #ffffff; /* 삭제 버튼 텍스트는 흰색 */
+  color: #ffffff;
   border-radius: 15px;
   align-items: center;
   justify-content: center;
 `;
 
-export const Button2 = styled.div`
+export const Button2 = styled.button`
   display: flex;
   width: 120px;
   height: 36px;
   flex-direction: column;
   background-color: #ffffff;
   cursor: pointer;
-  color: #000000; /* 취소 버튼 텍스트는 검정색 */
+  color: #000000;
   border: 1px solid #000;
   border-radius: 15px;
   align-items: center;
   justify-content: center;
 `;
+
 
 export const ModalContent2 = styled.div`
   display: flex;

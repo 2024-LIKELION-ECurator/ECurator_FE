@@ -88,7 +88,7 @@ function PostListItem({ post, onClick }) {
     };
 
     const handleConfirmDelete = () => {
-        const accessToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzM0NTcxMzc2LCJpYXQiOjE3MzQ0ODQ5NzYsImp0aSI6IjZiZmY3NzkyZWJmMzRlZTU4YzIzZGY4Y2JjZGYyZDQwIiwidXNlcl9pZCI6Mn0.bt8uHdRa7bZEepJBWemFUOXPRSJCW_8NRjleFWznkt4";
+        const accessToken = localStorage.getItem("access_token");
 
         if (!accessToken) {
             alert("로그인이 필요합니다.");
@@ -135,7 +135,7 @@ function PostListItem({ post, onClick }) {
                     <EditButton
                         onClick={(e) => {
                             e.stopPropagation();
-                            navigate("/postedit");
+                            navigate(`/postedit/${post.id}`);
                         }}
                     >
                         수정

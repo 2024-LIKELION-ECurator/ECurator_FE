@@ -13,8 +13,8 @@ const PostEdit = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     // 게시글 데이터 로드
-    useEffect(() => {   
-        const accessToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzM0NTcxMzc2LCJpYXQiOjE3MzQ0ODQ5NzYsImp0aSI6IjZiZmY3NzkyZWJmMzRlZTU4YzIzZGY4Y2JjZGYyZDQwIiwidXNlcl9pZCI6Mn0.bt8uHdRa7bZEepJBWemFUOXPRSJCW_8NRjleFWznkt4";
+    useEffect(() => {
+        const accessToken = localStorage.getItem("access_token");
 
         if (!accessToken) {
             alert("로그인이 필요합니다.");
@@ -23,7 +23,7 @@ const PostEdit = () => {
         }
 
         // API 요청: 기존 게시글 데이터 가져오기
-        fetch(`/diary/detail/<int:pk>/`, {
+        fetch(`/diary/detail/${id}/`, { // 수정된 부분
             headers: {
                 "Authorization": `Bearer ${accessToken}`,
             },
@@ -41,20 +41,21 @@ const PostEdit = () => {
                 alert("게시글을 불러오는 중 문제가 발생했습니다.");
             });
     }, [id, navigate]);
+    
 
     // 수정 요청
     const handleUpdatePost = async () => {
         const payload = { title, content }; // 수정할 데이터
-        const accessToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzM0NTcxMzc2LCJpYXQiOjE3MzQ0ODQ5NzYsImp0aSI6IjZiZmY3NzkyZWJmMzRlZTU4YzIzZGY4Y2JjZGYyZDQwIiwidXNlcl9pZCI6Mn0.bt8uHdRa7bZEepJBWemFUOXPRSJCW_8NRjleFWznkt4";
+        const accessToken = localStorage.getItem("access_token");
 
         if (!accessToken) {
             alert("로그인이 필요합니다.");
-            navigate("/");
+            navigate("/login");
             return;
         }
 
         try {
-            const response = await fetch(`/diary/update/<int:pk>/`, {
+            const response = await fetch(`/diary/update/${id}/`, { // 수정된 부분
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",

@@ -7,7 +7,7 @@ export const registerModal = ({ onConfirm }) => {
         <S.ModalContent2>
             <S.TextType2>일기가 등록되었습니다.</S.TextType2>
             <S.Row2>
-            <S.Button color="#000000" onClick={onConfirm}>확인</S.Button>
+            <S.Button onClick={onConfirm}>확인</S.Button>
             </S.Row2>
         </S.ModalContent2>
         </S.ModalOverlay>
